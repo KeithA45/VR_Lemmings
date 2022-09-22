@@ -19,9 +19,10 @@ public class SpawnLemmings : MonoBehaviour
 
     Vector3 GetSpawnPoint() 
     {
-        float x = Random.Range(-9, 9);
-        float y = Random.Range(0.6f, 1);
-        float z = Random.Range(-9, 9);
+        // Values are currently hard coded to positions on start platform
+        float x = Random.Range(-0.9f, 1.83f);
+        float y = Random.Range(0.97f, 1);
+        float z = Random.Range(-5.3f, -2.4f);
 
         return new Vector3(x, y, z);
     }
