@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DestroyOnCollionScript : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag.Contains("Lemming")){
-            Destroy(collision.gameObject);
+        if (collider.gameObject.tag.Contains("Lemming"))
+        {
+            Destroy(collider.gameObject);
         }
     }
 }
