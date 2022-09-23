@@ -11,4 +11,11 @@ public class LemmingMovement : MonoBehaviour{
       transform.Translate(0,-0.01f,0);
       transform.Translate(0,0.01f,0);
    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.tag == "Floor"){
+            Destroy(this.gameObject);
+        }
+    }
 }
