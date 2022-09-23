@@ -26,13 +26,5 @@ public class LemmingMovementV2 : MonoBehaviour
 
         controller.Move(movementVec * Time.deltaTime);
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag.Contains("Floor")){
-            Destroy(this.gameObject);
-        }
-    }
 }
 
